@@ -10,7 +10,7 @@ class Toy():
 action_figure = Toy('red', 0)
 
 
-# ------------
+# -------------
 class SuperList(list):
     def __len__(self):
         return 1000
