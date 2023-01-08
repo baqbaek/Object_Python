@@ -27,14 +27,13 @@ class Archer(User):
         print(f'Has {self.arrows} arrows left')
 
 
-wizard1 = Wizard('Bartek', 30, 'Bartek@gmail.com')
-archer1 = Archer('Lukas', 25, 'Lukas@gmail.com')
-
-
 # example of Polymorphism
 def player_attack(char):
     char.attack()
 
+
+wizard1 = Wizard('Bartek', 30, 'Bartek@gmail.com')
+archer1 = Archer('Lukas', 25, 'Lukas@gmail.com')
 
 print(wizard1.email)
 print(archer1.email)
