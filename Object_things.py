@@ -26,6 +26,10 @@ class Archer(User):
     def attack(self):
         print(f'Has {self.arrows} arrows left')
 
+class Hybrid(Wizard, Archer):
+    def __init__(self, name , power, arrows, email):
+        Wizard.__init__(self, name, power, email)
+        Archer.__init__(self, name, arrows, email)
 
 # example of Polymorphism
 def player_attack(char):
@@ -34,6 +38,8 @@ def player_attack(char):
 
 wizard1 = Wizard('Bartek', 30, 'Bartek@gmail.com')
 archer1 = Archer('Lukas', 25, 'Lukas@gmail.com')
+hybrid1 = Hybrid('BarLuk', 50, 100, '123@gmail.com' )
 
 print(wizard1.email)
 print(archer1.email)
+print(hybrid1.power)
