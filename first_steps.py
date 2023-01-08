@@ -6,14 +6,11 @@ class PlayerCharacter():
             self.name = name
             self.age = age
 
-    def shout(self):
-        print(f'My name is {self.name}')
+    def speak(self):
+        print(f'My name is {self.name} and I am {self.age} years old')
 
 
-player1 = PlayerCharacter('Bartek', 22)
-player2 = PlayerCharacter('Lukas', 23)
+player1 = PlayerCharacter('Bartek', 23)
+player2 = PlayerCharacter('Lukas', 22)
 
-# print(f'{player1.name} {player1.age}')
-# print(player2.name)
-# print(player1.membership)
-# print(player1.shout())
+player1.speak()
