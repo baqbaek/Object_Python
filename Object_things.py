@@ -1,11 +1,15 @@
 # inheritence
 class User:
+    def __init__(self, email):
+        self.email = email
+
     def sign_in(self):
         print('Logged in')
 
 
 class Wizard(User):
-    def __init__(self, name, power):
+    def __init__(self, name, power, email):
+        User.__init__(self, email)
         self.name = name
         self.power = power
 
@@ -14,7 +18,8 @@ class Wizard(User):
 
 
 class Archer(User):
-    def __init__(self, name, arrows):
+    def __init__(self, name, arrows, email):
+        User.__init__(self, email)  # Instead of using User I can use super()
         self.name = name
         self.arrows = arrows
 
@@ -22,8 +27,8 @@ class Archer(User):
         print(f'Has {self.arrows} arrows left')
 
 
-wizard1 = Wizard('Bartek', 30)
-archer1 = Archer('Lukas', 25)
+wizard1 = Wizard('Bartek', 30, 'Bartek@gmail.com')
+archer1 = Archer('Lukas', 25, 'Lukas@gmail.com')
 
 
 # example of Polymorphism
@@ -31,5 +36,5 @@ def player_attack(char):
     char.attack()
 
 
-player_attack(wizard1)
-player_attack(archer1)
+print(wizard1.email)
+print(archer1.email)
