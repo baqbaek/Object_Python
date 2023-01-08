@@ -25,6 +25,11 @@ class Archer(User):
 wizard1 = Wizard('Bartek', 30)
 archer1 = Archer('Lukas', 25)
 
-wizard1.attack()
-wizard1.sign_in()
-archer1.attack()
+
+# example of Polymorphism
+def player_attack(char):
+    char.attack()
+
+
+player_attack(wizard1)
+player_attack(archer1)
