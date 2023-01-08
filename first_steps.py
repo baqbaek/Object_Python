@@ -3,11 +3,11 @@ class PlayerCharacter():
 
     def __init__(self, name = 'Anon', age = '0'):
         if age > 18:
-            self.name = name
-            self.age = age
+            self._name = name   # _name & _age are 'private'
+            self._age = age
 
     def speak(self):
-        print(f'My name is {self.name} and I am {self.age} years old')
+        print(f'My name is {self._name} and I am {self._age} years old')
 
 
 player1 = PlayerCharacter('Bartek', 23)
